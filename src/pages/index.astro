@@ -14,7 +14,16 @@ import "../style/style.css"
 	</head>
 	<body>
 		<div class="container max-w-6xl px-5 mx-auto">
-			{posts && posts.map(post => <a href={post.url}>{post.frontmatter.title}</a>)}
+			<div class="flex flex-col gap-6">
+				{
+					posts &&
+						posts.map(post => (
+							<a class="underline text-blue-500" href={post.url}>
+								{post.frontmatter.title}
+							</a>
+						))
+				}
+			</div>
 		</div>
 	</body>
 </html>
